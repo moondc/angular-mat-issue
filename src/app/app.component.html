@@ -1,0 +1,10 @@
+<header [ngClass]="theme" class="header">
+  <mat-form-field>
+    <mat-select [formControl]="panelColor" panelClass="test" (selectionChange)="onSelect($event)">
+      @for (theme of themes; track theme) {
+      <mat-option [value]="theme">{{theme}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+</header>
